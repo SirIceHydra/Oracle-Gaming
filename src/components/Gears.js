@@ -31,7 +31,7 @@ const Gears = () => {
   return (
     <section className="gears" id="gears">
       <div className="container">
-        <h2 className="h2 section-title">check our gears</h2>
+        <h2 className="h2 section-title">Shop TCG and Merch</h2>
         <ul className="gears-list">
           {gearsData.map((gear) => (
             <li key={gear.id}>

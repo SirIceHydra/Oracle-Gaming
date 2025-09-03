@@ -617,7 +617,7 @@ body.active { overflow-y: hidden; }
 \*-----------------------------------*/
 
 .gallery-carousel { 
-  padding: var(--section-padding) 0;
+  padding: var(--section-padding) 0 30px 0;
   background: var(--raisin-black-2);
   overflow: hidden;
 }
@@ -630,15 +630,15 @@ body.active { overflow-y: hidden; }
 
 .carousel-slides {
   position: relative;
-  height: 600px;
+  height: 400px;
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
   position: absolute;
-  width: 80%;
-  max-width: 800px;
+  width: 65%;
+  max-width: 650px;
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
@@ -796,11 +796,11 @@ body.active { overflow-y: hidden; }
 /* Responsive Design */
 @media (max-width: 768px) {
   .carousel-slides {
-    height: 400px;
+    height: 350px;
   }
   
   .carousel-slide {
-    width: 90%;
+    width: 85%;
     max-width: none;
   }
   
@@ -896,7 +896,10 @@ body.active { overflow-y: hidden; }
   #GEARS
 \*-----------------------------------*/
 
-.gears { padding: var(--section-padding) 0; }
+.gears { 
+  padding: 30px 0 var(--section-padding) 0;
+  background: var(--raisin-black-2);
+}
 
 .gears-list {
   display: grid;

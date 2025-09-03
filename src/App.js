@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Gallery from './components/Gallery';
+import Gears from './components/Gears';
 import About from './components/About';
 import Tournament from './components/Tournament';
 import Team from './components/Team';
-import Gears from './components/Gears';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 import GoToTop from './components/GoToTop';
@@ -33,11 +33,11 @@ function App() {
         <article>
           <Hero />
           <Gallery />
+          <Gears />
           <div className="section-wrapper">
             <About />
             <Tournament />
             <Team />
-            <Gears />
             <Newsletter />
           </div>
         </article>
