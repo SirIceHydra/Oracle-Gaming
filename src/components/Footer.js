@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-brand-wrapper">
             <a href="/" className="logo">
-              <img src="/images/logo.svg" alt="GameX logo" />
+              <img src="/Logo/kamelesanpillay_20220620185113.png" alt="GameX logo" />
             </a>
 
             <div className="footer-menu-wrapper">

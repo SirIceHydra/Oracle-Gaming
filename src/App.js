@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Gallery from './components/Gallery';
 import About from './components/About';
 import Tournament from './components/Tournament';
-import Gallery from './components/Gallery';
 import Team from './components/Team';
 import Gears from './components/Gears';
 import Newsletter from './components/Newsletter';
@@ -22,7 +22,7 @@ function App() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', () => handleScroll());
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -32,10 +32,10 @@ function App() {
       <main>
         <article>
           <Hero />
+          <Gallery />
           <div className="section-wrapper">
             <About />
             <Tournament />
-            <Gallery />
             <Team />
             <Gears />
             <Newsletter />

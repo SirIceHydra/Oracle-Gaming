@@ -18,7 +18,7 @@ const Header = () => {
 
       <div className="container">
         <a href="/" className="logo">
-          <img src="/images/logo.svg" alt="GameX logo" />
+          <img src="/Logo/kamelesanpillay_20220620185113.png" alt="GameX logo" />
         </a>
 
         <button className="nav-open-btn" onClick={toggleNav}>
@@ -28,7 +28,7 @@ const Header = () => {
         <nav className={`navbar ${isNavOpen ? 'active' : ''}`}>
           <div className="navbar-top">
             <a href="/" className="logo">
-              <img src="/images/logo.svg" alt="GameX logo" />
+              <img src="/Logo/kamelesanpillay_20220620185113.png" alt="GameX logo" />
             </a>
 
             <button className="nav-close-btn" onClick={closeNav}>
