@@ -5,22 +5,19 @@ const About = () => {
     <section className="about" id="about">
       <div className="container">
         <figure className="about-banner">
-          <img src="/images/about-img.png" alt="M shape" className="about-img" />
-          <img src="/images/character-1.png" alt="Game character" className="character character-1" />
-          <img src="/images/character-2.png" alt="Game character" className="character character-2" />
-          <img src="/images/character-3.png" alt="Game character" className="character character-3" />
+          <img src="/images/cards.gif" alt="TCG Collection" className="about-img" />
         </figure>
 
         <div className="about-content">
-          <p className="about-subtitle">Find team member</p>
-          <h2 className="about-title">Experience just for gamers <strong>offer</strong></h2>
+          <p className="about-subtitle">Find your collection</p>
+          <h2 className="about-title">Premium TCG cards <strong>available</strong></h2>
           <p className="about-text">
-            Nullam quis ante. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum
-            viverra felis nunc et lorem. In auctor lobortis lacus. Phasellus gravida semper nisi. Aliquam lobortis.
+            Discover rare and exclusive trading card game collections. From Pokémon to Magic: The Gathering, 
+            we offer authentic cards, booster packs, and complete sets for collectors and players alike.
           </p>
           <p className="about-bottom-text">
             <ion-icon name="arrow-forward-circle-outline"></ion-icon>
-            <span>Will sharpen your brain and focus</span>
+            <span>Build your ultimate TCG collection</span>
           </p>
         </div>
       </div>

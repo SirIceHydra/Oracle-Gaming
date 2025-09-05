@@ -4,27 +4,27 @@ const Gears = () => {
   const gearsData = [
     {
       id: 1,
-      image: 'gears-img-1.png',
-      title: 'Headphone',
-      subtitle: 'e-sports',
-      price: '$18',
-      alt: 'Headphone'
+      image: 'onepiecebooster.webp',
+      title: 'One Piece Booster Pack',
+      subtitle: 'TCG',
+      price: 'R85',
+      alt: 'One Piece Trading Card Game Booster Pack'
     },
     {
       id: 2,
-      image: 'gears-img-2.png',
-      title: 'Controller',
-      subtitle: 'e-sports',
-      price: '$29',
-      alt: 'Controller'
+      image: 'pokeproduct.png',
+      title: 'Pokémon Elite Trainer Box',
+      subtitle: 'TCG',
+      price: 'R450',
+      alt: 'Pokémon Elite Trainer Box'
     },
     {
       id: 3,
-      image: 'gears-img-3.png',
-      title: 'Gaming mask',
-      subtitle: 'e-sports',
-      price: '$45',
-      alt: 'Gaming mask'
+      image: 'mtgproduct.png',
+      title: 'Magic: The Gathering Booster',
+      subtitle: 'TCG',
+      price: 'R65',
+      alt: 'Magic: The Gathering Booster Pack'
     }
   ];
 
@@ -44,8 +44,8 @@ const Gears = () => {
                     <ion-icon name="share-social"></ion-icon>
                   </button>
                   <div className="card-time-wrapper">
-                    <ion-icon name="time-outline"></ion-icon>
-                    <span>In 4 days</span>
+                    <ion-icon name="pricetag-outline"></ion-icon>
+                    <span>SALE</span>
                   </div>
                 </div>
 

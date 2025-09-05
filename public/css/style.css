@@ -459,7 +459,7 @@ body.active { overflow-y: hidden; }
 
 .about-banner { margin-bottom: 40px; }
 
-.about-img { width: 100%; }
+.about-img { width: 150%; }
 
 .character { display: none; }
 
@@ -916,13 +916,17 @@ body.active { overflow-y: hidden; }
   display: grid;
   place-items: center;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
 .gears .card-banner a { width: 100%; }
 
 .gears .card-banner img {
-  width: 45%;
+  width: 40%;
+  max-width: 100%;
+  height: auto;
   margin-inline: auto;
+  object-fit: contain;
 }
 
 .share,
