@@ -9,7 +9,7 @@ const Gallery = () => {
     {
       id: 1,
       title: "DUNGEONS & DRAGONS",
-      image: "/images/d&d-banner.jpg",
+      image: "/images/dnd-banner.jpg",
       alt: "Dungeons & Dragons - fantasy tabletop roleplaying game"
     },
     {
@@ -120,9 +120,20 @@ const Gallery = () => {
                   zIndex: isActive ? 10 : 1
                 }}
               >
-                <div className="slide-content">
-                  <img src={slide.image} alt={slide.alt} />
-                  <div className="slide-overlay">
+                                            <div className="slide-content">
+                              <img 
+                                src={slide.image} 
+                                alt={slide.alt}
+                                onError={(e) => {
+                                  console.error(`Failed to load carousel image: ${slide.image}`);
+                                  e.target.style.border = '2px solid red';
+                                  e.target.alt = `FAILED: ${slide.image}`;
+                                }}
+                                onLoad={() => {
+                                  console.log(`Successfully loaded carousel image: ${slide.image}`);
+                                }}
+                              />
+                              <div className="slide-overlay">
                     <h3 className="slide-title">{slide.title}</h3>
                     <button className="btn btn-primary slide-shop-btn">
                       <span>Shop now</span>
