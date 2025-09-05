@@ -4,21 +4,9 @@ import TournamentBanner from '../assets/images/tournamentbanner.jpg';
 const Tournament = () => {
   return (
     <section className="tournament" id="tournament" style={{padding: '0', margin: '0'}}>
-      <div style={{
-        display: 'flex',
-        height: '60vh',
-        width: '100%',
-        backgroundColor: '#1a1a1a'
-      }}>
+      <div className="tournament-layout">
         {/* Left side - Tournament info */}
-        <div style={{
-          flex: '0 0 30%',
-          backgroundColor: '#2a2a2a',
-          padding: '40px 30px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}>
+        <div className="tournament-details-box">
           <div style={{textAlign: 'left'}}>
             <p className="tournament-subtitle" style={{color: '#14fefb', fontSize: '18px', margin: '0 0 20px 0', fontFamily: 'Oswald, sans-serif', fontWeight: '500', textTransform: 'uppercase'}}>Weekly Events</p>
             <h2 className="h3 tournament-title" style={{color: 'white', fontSize: '36px', margin: '0 0 25px 0', fontFamily: 'Oswald, sans-serif', textTransform: 'uppercase', lineHeight: '1.2'}}>TCG Tournaments</h2>
@@ -54,13 +42,9 @@ const Tournament = () => {
             }}>Register Now</button>
           </div>
         </div>
-        
         {/* Right side - Banner image */}
-        <div style={{
-          flex: '0 0 70%',
-          backgroundImage: `url(${TournamentBanner})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
+        <div className="tournament-banner-img" style={{
+          backgroundImage: `url(${TournamentBanner})`
         }}>
         </div>
       </div>

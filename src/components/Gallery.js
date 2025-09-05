@@ -8,6 +8,7 @@ import BannerPokemon from '../assets/images/pokemon-banner.avif';
 const Gallery = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isSingleSlide, setIsSingleSlide] = useState(false);
   const autoPlayRef = useRef(null);
 
   const slides = [
@@ -60,6 +61,11 @@ const Gallery = () => {
   };
 
   useEffect(() => {
+    const mq = window.matchMedia('(max-width: 820px)');
+    const apply = () => setIsSingleSlide(mq.matches);
+    apply();
+    mq.addEventListener('change', apply);
+
     if (isAutoPlaying) {
       autoPlayRef.current = setInterval(() => {
         nextSlide();
@@ -70,22 +76,12 @@ const Gallery = () => {
       if (autoPlayRef.current) {
         clearInterval(autoPlayRef.current);
       }
+      mq.removeEventListener('change', apply);
     };
   }, [isAutoPlaying, currentSlide]);
 
-  // Create a cyclic array of slides for proper side image display
-  const getCyclicSlides = () => {
-    const result = [];
-    for (let i = 0; i < slides.length; i++) {
-      const slideIndex = (currentSlide + i) % slides.length;
-      result.push({
-        ...slides[slideIndex],
-        originalIndex: slideIndex,
-        displayIndex: i
-      });
-    }
-    return result;
-  };
+  const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+  const nextIndex = (currentSlide + 1) % slides.length;
 
   return (
     <section className="gallery-carousel">
@@ -107,48 +103,73 @@ const Gallery = () => {
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </button>
 
-        {/* Carousel Slides */}
+        {/* Carousel Slides - show prev/active/next on desktop; only active on mobile */}
         <div className="carousel-slides">
-          {getCyclicSlides().map((slide, index) => {
-            // Calculate position for each slide
-            const offset = (index - 1) * 100; // Center slide is at index 1
-            const isActive = index === 1; // Index 1 is the center/active slide
-            const isVisible = Math.abs(offset) <= 100; // Show slides within 100% offset
-            
-            return (
-              <div
-                key={`${slide.id}-${slide.originalIndex}`}
-                className={`carousel-slide ${isActive ? 'active' : ''}`}
-                style={{
-                  transform: `translateX(${offset}%)`,
-                  opacity: isVisible ? 1 : 0.3,
-                  zIndex: isActive ? 10 : 1
-                }}
-              >
-                                            <div className="slide-content">
-                              <img 
-                                src={slide.image} 
-                                alt={slide.alt}
-                                onError={(e) => {
-                                  console.error(`Failed to load carousel image: ${slide.image}`);
-                                  e.target.style.border = '2px solid red';
-                                  e.target.alt = `FAILED: ${slide.image}`;
-                                }}
-                                onLoad={() => {
-                                  console.log(`Successfully loaded carousel image: ${slide.image}`);
-                                }}
-                              />
-                              <div className="slide-overlay">
-                    <h3 className="slide-title">{slide.title}</h3>
-                    <button className="btn btn-primary slide-shop-btn">
-                      <span>Shop now</span>
-                      <ion-icon name="cart-outline"></ion-icon>
-                    </button>
-                  </div>
+          {!isSingleSlide && (
+            <div
+              key={`prev-${prevIndex}`}
+              className="carousel-slide prev"
+              style={{
+                left: '5%',
+                transform: 'none',
+                width: '60%',
+                opacity: 0.6,
+                zIndex: 2
+              }}
+              aria-hidden="true"
+            >
+              <div className="slide-content">
+                <img src={slides[prevIndex].image} alt={slides[prevIndex].alt} />
+                <div className="slide-overlay">
+                  <h3 className="slide-title">{slides[prevIndex].title}</h3>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          )}
+
+          <div
+            key={`active-${currentSlide}`}
+            className="carousel-slide active"
+            style={{
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: isSingleSlide ? '100%' : '75%',
+              zIndex: 3
+            }}
+          >
+            <div className="slide-content">
+              <img src={slides[currentSlide].image} alt={slides[currentSlide].alt} />
+              <div className="slide-overlay">
+                <h3 className="slide-title">{slides[currentSlide].title}</h3>
+                <button className="btn btn-primary slide-shop-btn">
+                  <span>Shop now</span>
+                  <ion-icon name="cart-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {!isSingleSlide && (
+            <div
+              key={`next-${nextIndex}`}
+              className="carousel-slide next"
+              style={{
+                left: '95%',
+                transform: 'translateX(-100%)',
+                width: '60%',
+                opacity: 0.6,
+                zIndex: 2
+              }}
+              aria-hidden="true"
+            >
+              <div className="slide-content">
+                <img src={slides[nextIndex].image} alt={slides[nextIndex].alt} />
+                <div className="slide-overlay">
+                  <h3 className="slide-title">{slides[nextIndex].title}</h3>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Carousel Indicators */}
