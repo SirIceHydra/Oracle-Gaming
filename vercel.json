@@ -3,8 +3,11 @@
   "outputDirectory": "build",
   "rewrites": [
     {
-      "source": "/((?!api|_next/static|_next/image|favicon.ico|images|Logo|static).*)",
-      "destination": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html",
+      "missing": [
+        { "type": "file", "value": "/$1" }
+      ]
     }
   ],
   "headers": [
