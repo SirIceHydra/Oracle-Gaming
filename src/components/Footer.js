@@ -105,7 +105,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container">
           <p className="copyright">
-            Copyright &copy; 2024 Oracle Gaming. All rights reserved
+            Copyright &copy; 2025 Oracle Gaming. All rights reserved
           </p>
         </div>
       </div>
