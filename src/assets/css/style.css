@@ -149,14 +149,15 @@ body.active { overflow-y: hidden; }
   #CUSTOM FONT
 \*-----------------------------------*/
 
-/* Webfont: Refault-Italic */
+/* Webfont: Refault */
 @font-face {
     font-family: 'Refault';
     src: url('../fonts/REFAULT.woff2') format('woff2'), /* Modern Browsers */
          url('../fonts/REFAULT.woff') format('woff'), /* Modern Browsers */
          url('../fonts/REFAULT.ttf') format('truetype'); /* Safari, Android, iOS */
-    font-style: italic;
-    font-weight: normal;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 

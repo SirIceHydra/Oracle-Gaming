@@ -10,10 +10,16 @@ const Hero = () => {
       const handleLoadedData = () => {
         video.setAttribute('data-loaded', 'true');
       };
-      
+
       const handleCanPlay = () => {
         video.setAttribute('data-loaded', 'true');
       };
+      // Defer playback start to after fonts are loaded to reduce reflow
+      if (document && 'fonts' in document) {
+        document.fonts.ready.then(() => {
+          try { video.play().catch(() => {}); } catch {}
+        });
+      }
 
       video.addEventListener('loadeddata', handleLoadedData);
       video.addEventListener('canplay', handleCanPlay);
@@ -35,7 +41,7 @@ const Hero = () => {
         muted 
         loop 
         playsInline
-        preload="auto"
+        preload="metadata"
         style={{
           position: 'absolute',
           top: 0,
