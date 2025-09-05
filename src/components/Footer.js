@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-brand-wrapper">
             <a href="/" className="logo">
-              <img src="/Logo/kamelesanpillay_20220620185113.png" alt="GameX logo" />
+              <img src="/Logo/Name_Black.png" alt="Oracle Gaming logo" />
             </a>
 
             <div className="footer-menu-wrapper">
@@ -25,19 +25,19 @@ const Footer = () => {
                   <a href="#hero" className="footer-menu-link">Home</a>
                 </li>
                 <li>
-                  <a href="#about" className="footer-menu-link">About</a>
+                  <a href="#gallery" className="footer-menu-link">Products</a>
                 </li>
                 <li>
-                  <a href="#tournament" className="footer-menu-link">Tournament</a>
+                  <a href="#gears" className="footer-menu-link">Shop</a>
                 </li>
                 <li>
-                  <a href="#team" className="footer-menu-link">Team</a>
+                  <a href="#tournament" className="footer-menu-link">Tournaments</a>
                 </li>
                 <li>
-                  <a href="#gears" className="footer-menu-link">Gears</a>
+                  <a href="#team" className="footer-menu-link">About</a>
                 </li>
                 <li>
-                  <a href="/contact" className="footer-menu-link">Contact</a>
+                  <a href="#contact" className="footer-menu-link">Contact</a>
                 </li>
               </ul>
 
@@ -105,12 +105,8 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container">
           <p className="copyright">
-            Copyright &copy; 2022 <a href="https://github.com/codewithsadee" target="_blank" rel="noopener noreferrer">codewithsadee</a>. all rights reserved
+            Copyright &copy; 2024 Oracle Gaming. All rights reserved
           </p>
-
-          <figure className="footer-bottom-img">
-            <img src="/images/footer-bottom-img.png" alt="Online payment companies logo" />
-          </figure>
         </div>
       </div>
     </footer>

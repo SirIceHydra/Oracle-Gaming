@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -9,6 +11,18 @@ const Header = () => {
 
   const closeNav = () => {
     setIsNavOpen(false);
+  };
+
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen);
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    // Add search functionality here
+    console.log('Searching for:', searchQuery);
+    setSearchQuery('');
+    setIsSearchOpen(false);
   };
 
   return (
@@ -41,16 +55,16 @@ const Header = () => {
               <a href="#hero" className="navbar-link" onClick={closeNav}>Home</a>
             </li>
             <li>
-              <a href="#about" className="navbar-link" onClick={closeNav}>About</a>
+              <a href="#gallery" className="navbar-link" onClick={closeNav}>Products</a>
             </li>
             <li>
-              <a href="#tournament" className="navbar-link" onClick={closeNav}>Tournament</a>
+              <a href="#gears" className="navbar-link" onClick={closeNav}>Shop</a>
             </li>
             <li>
-              <a href="#team" className="navbar-link" onClick={closeNav}>Team</a>
+              <a href="#tournament" className="navbar-link" onClick={closeNav}>Tournaments</a>
             </li>
             <li>
-              <a href="#gears" className="navbar-link" onClick={closeNav}>Gears</a>
+              <a href="#team" className="navbar-link" onClick={closeNav}>About</a>
             </li>
             <li>
               <a href="#contact" className="navbar-link" onClick={closeNav}>Contact</a>
@@ -82,16 +96,27 @@ const Header = () => {
         </nav>
 
         <div className="header-actions">
-          <button className="search">
-            <ion-icon name="search-outline"></ion-icon>
-          </button>
-
-          <button className="btn-sign_in">
-            <div className="icon-box">
-              <ion-icon name="log-in-outline"></ion-icon>
-            </div>
-            <span>Log-in</span>
-          </button>
+          <div className="search-container">
+            <button className="search" onClick={toggleSearch}>
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+            
+            {isSearchOpen && (
+              <form className="search-form" onSubmit={handleSearch}>
+                <input
+                  type="text"
+                  placeholder="Search products..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="search-input"
+                  autoFocus
+                />
+                <button type="submit" className="search-submit">
+                  <ion-icon name="search-outline"></ion-icon>
+                </button>
+              </form>
+            )}
+          </div>
         </div>
       </div>
     </header>

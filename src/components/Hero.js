@@ -57,7 +57,7 @@ const Hero = () => {
             <span>Shop now</span>
             <ion-icon name="play-circle"></ion-icon>
           </button>
-          <button className="btn btn-link">Dream making</button>
+          <button className="btn btn-link">Contact Us</button>
         </div>
       </div>
     </section>

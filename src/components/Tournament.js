@@ -2,45 +2,65 @@ import React from 'react';
 
 const Tournament = () => {
   return (
-    <section className="tournament" id="tournament">
-      <div className="container">
-        <div className="tournament-content">
-          <p className="tournament-subtitle">Check out our next</p>
-          <h2 className="h3 tournament-title">Gaming tournaments !</h2>
-          <p className="tournament-text">
-            Lpsum dolor sit amet, consectetur adipiscing elit, sed labore et dolore magna aliqua.
-          </p>
-          <button className="btn btn-primary">Join with us</button>
+    <section className="tournament" id="tournament" style={{padding: '0', margin: '0'}}>
+      <div style={{
+        display: 'flex',
+        height: '60vh',
+        width: '100%',
+        backgroundColor: '#1a1a1a'
+      }}>
+        {/* Left side - Tournament info */}
+        <div style={{
+          flex: '0 0 30%',
+          backgroundColor: '#2a2a2a',
+          padding: '40px 30px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}>
+          <div style={{textAlign: 'left'}}>
+            <p className="tournament-subtitle" style={{color: '#14fefb', fontSize: '18px', margin: '0 0 20px 0', fontFamily: 'Oswald, sans-serif', fontWeight: '500', textTransform: 'uppercase'}}>Weekly Events</p>
+            <h2 className="h3 tournament-title" style={{color: 'white', fontSize: '36px', margin: '0 0 25px 0', fontFamily: 'Oswald, sans-serif', textTransform: 'uppercase', lineHeight: '1.2'}}>TCG Tournaments</h2>
+            <p className="tournament-text" style={{color: '#ccc', fontSize: '16px', margin: '0 0 30px 0', lineHeight: '1.8'}}>Join our weekly TCG tournaments every Saturday!</p>
+            <h3 className="h3 tournament-prize-title" style={{color: 'white', fontSize: '24px', margin: '0 0 15px 0', fontFamily: 'Oswald, sans-serif', textTransform: 'uppercase', lineHeight: '1.2'}}>Prize Pool</h3>
+            <data className="tournament-prize-data" style={{
+              backgroundColor: '#14fefb',
+              color: '#1a1a1a',
+              padding: '8px 42px',
+              borderRadius: '50px',
+              fontSize: '28px',
+              fontWeight: '700',
+              fontFamily: 'Oswald, sans-serif',
+              display: 'inline-block',
+              marginBottom: '30px'
+            }}>R5,000</data>
+            <br />
+            <button className="btn btn-primary" style={{
+              backgroundColor: '#14fefb',
+              color: '#1a1a1a',
+              border: 'none',
+              padding: '13px 34px',
+              fontSize: '20px',
+              fontWeight: '500',
+              letterSpacing: '1px',
+              textTransform: 'uppercase',
+              fontFamily: 'Oswald, sans-serif',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              clipPath: 'polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0)',
+              transition: '0.15s ease-in-out'
+            }}>Register Now</button>
+          </div>
         </div>
-
-        <div className="tournament-prize">
-          <h2 className="h3 tournament-prize-title">Prize pool</h2>
-          <data value="80000">$80000</data>
-          <figure>
-            <img src="/images/prize-img.png" alt="Tournament prize" />
-          </figure>
-        </div>
-
-        <div className="tournament-winners">
-          <h2 className="h3 tournament-winners-title">Last winners</h2>
-          <ul className="tournament-winners-list">
-            <li>
-              <div className="winner-card">
-                <figure className="card-banner">
-                  <img src="/images/winner-img-1.png" alt="1st place winner" />
-                </figure>
-                <h3 className="h5 card-title">1st place</h3>
-              </div>
-            </li>
-            <li>
-              <div className="winner-card">
-                <figure className="card-banner">
-                  <img src="/images/winner-img-2.png" alt="2nd place winner" />
-                </figure>
-                <h3 className="h5 card-title">2nd place</h3>
-              </div>
-            </li>
-          </ul>
+        
+        {/* Right side - Banner image */}
+        <div style={{
+          flex: '0 0 70%',
+          backgroundImage: 'url(/images/tournamentbanner.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}>
         </div>
       </div>
     </section>

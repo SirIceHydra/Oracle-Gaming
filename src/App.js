@@ -6,7 +6,6 @@ import Gears from './components/Gears';
 import About from './components/About';
 import Tournament from './components/Tournament';
 import Team from './components/Team';
-import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 import GoToTop from './components/GoToTop';
 
@@ -38,7 +37,6 @@ function App() {
             <About />
             <Tournament />
             <Team />
-            <Newsletter />
           </div>
         </article>
       </main>
