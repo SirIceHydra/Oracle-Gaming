@@ -1,4 +1,5 @@
 import React from 'react';
+import TournamentBanner from '../assets/images/tournamentbanner.jpg';
 
 const Tournament = () => {
   return (
@@ -57,7 +58,7 @@ const Tournament = () => {
         {/* Right side - Banner image */}
         <div style={{
           flex: '0 0 70%',
-          backgroundImage: 'url(/images/tournamentbanner.jpg)',
+          backgroundImage: `url(${TournamentBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}>

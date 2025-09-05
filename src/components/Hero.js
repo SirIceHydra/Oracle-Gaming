@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import HeroVideo from '../assets/images/may-sitting-near-waterfall-pokemon-emerald-pixel-wallpaperwaifu-com.mp4';
 
 const Hero = () => {
   const videoRef = useRef(null);
@@ -45,7 +46,7 @@ const Hero = () => {
           zIndex: -1
         }}
       >
-        <source src="/images/may-sitting-near-waterfall-pokemon-emerald-pixel-wallpaperwaifu-com.mp4" type="video/mp4" />
+        <source src={HeroVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       

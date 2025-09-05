@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import NewsletterImage from '../assets/images/newsletter-img.png';
 
 const Newsletter = () => {
   const [email, setEmail] = useState('');
@@ -16,7 +17,7 @@ const Newsletter = () => {
         <div className="newsletter-card">
           <div className="newsletter-content">
             <figure className="newsletter-img">
-              <img src="/images/newsletter-img.png" alt="Newsletter subscription" />
+              <img src={NewsletterImage} alt="Newsletter subscription" />
             </figure>
             <h2 className="h2 newsletter-title">Subscribe to our newsletter</h2>
           </div>

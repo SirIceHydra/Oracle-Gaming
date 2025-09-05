@@ -1,11 +1,12 @@
 import React from 'react';
+import CardsGif from '../assets/images/cards.gif';
 
 const About = () => {
   return (
     <section className="about" id="about">
       <div className="container">
         <figure className="about-banner">
-          <img src="/images/cards.gif" alt="TCG Collection" className="about-img" />
+          <img src={CardsGif} alt="TCG Collection" className="about-img" />
         </figure>
 
         <div className="about-content">

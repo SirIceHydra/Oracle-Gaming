@@ -1,4 +1,5 @@
 import React from 'react';
+import OracleStore from '../assets/images/OracleGaming.webp';
 
 const Team = () => {
   return (
@@ -57,7 +58,7 @@ const Team = () => {
             
             <div className="about-oracle-visual">
               <div className="about-oracle-image">
-                <img src="/images/OracleGaming.webp" alt="Oracle Gaming Store" />
+                <img src={OracleStore} alt="Oracle Gaming Store" />
               </div>
               
               <div className="about-oracle-map">

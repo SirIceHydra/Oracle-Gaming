@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LogoMain from '../assets/images/kamelesanpillay_20220620185113.png';
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -32,7 +33,7 @@ const Header = () => {
 
       <div className="container">
         <a href="/" className="logo">
-          <img src="/Logo/kamelesanpillay_20220620185113.png" alt="GameX logo" />
+          <img src={LogoMain} alt="GameX logo" />
         </a>
 
         <button className="nav-open-btn" onClick={toggleNav}>
@@ -42,7 +43,7 @@ const Header = () => {
         <nav className={`navbar ${isNavOpen ? 'active' : ''}`}>
           <div className="navbar-top">
             <a href="/" className="logo">
-              <img src="/Logo/kamelesanpillay_20220620185113.png" alt="GameX logo" />
+              <img src={LogoMain} alt="GameX logo" />
             </a>
 
             <button className="nav-close-btn" onClick={closeNav}>

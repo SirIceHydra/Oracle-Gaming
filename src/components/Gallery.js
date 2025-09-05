@@ -1,4 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
+import BannerDnd from '../assets/images/dnd-banner.jpg';
+import BannerYgo from '../assets/images/yugioh-banner.jpg';
+import BannerMtG from '../assets/images/magic-banner.png';
+import BannerOnePiece from '../assets/images/onepiece-banner.webp';
+import BannerPokemon from '../assets/images/pokemon-banner.avif';
 
 const Gallery = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -9,31 +14,31 @@ const Gallery = () => {
     {
       id: 1,
       title: "DUNGEONS & DRAGONS",
-      image: "/images/dnd-banner.jpg",
+      image: BannerDnd,
       alt: "Dungeons & Dragons - fantasy tabletop roleplaying game"
     },
     {
       id: 2,
       title: "YU-GI-OH!",
-      image: "/images/yugioh-banner.jpg",
+      image: BannerYgo,
       alt: "Yu-Gi-Oh! - trading card game and anime franchise"
     },
     {
       id: 3,
       title: "MAGIC: THE GATHERING",
-      image: "/images/magic-banner.png",
+      image: BannerMtG,
       alt: "Magic: The Gathering - fantasy trading card game"
     },
     {
       id: 4,
       title: "ONE PIECE",
-      image: "/images/onepiece-banner.webp",
+      image: BannerOnePiece,
       alt: "One Piece - anime and manga franchise"
     },
     {
       id: 5,
       title: "POKÉMON",
-      image: "/images/pokemon-banner.avif",
+      image: BannerPokemon,
       alt: "Pokémon - trading card game and media franchise"
     }
   ];

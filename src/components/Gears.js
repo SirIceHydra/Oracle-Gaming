@@ -1,4 +1,13 @@
 import React from 'react';
+import OnePieceBooster from '../assets/images/onepiecebooster.webp';
+import PokemonProduct from '../assets/images/pokeproduct.png';
+import MtgProduct from '../assets/images/mtgproduct.png';
+
+const imageMap = {
+  'onepiecebooster.webp': OnePieceBooster,
+  'pokeproduct.png': PokemonProduct,
+  'mtgproduct.png': MtgProduct
+};
 
 const Gears = () => {
   const gearsData = [
@@ -38,7 +47,7 @@ const Gears = () => {
               <div className="gears-card">
                 <div className="card-banner">
                   <a href={`/gear/${gear.id}`}>
-                    <img src={`/images/${gear.image}`} alt={gear.alt} />
+                    <img src={imageMap[gear.image]} alt={gear.alt} />
                   </a>
                   <button className="share">
                     <ion-icon name="share-social"></ion-icon>

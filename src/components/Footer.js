@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LogoBlack from '../assets/images/Name_Black.png';
 
 const Footer = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -16,7 +17,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-brand-wrapper">
             <a href="/" className="logo">
-              <img src="/Logo/Name_Black.png" alt="Oracle Gaming logo" />
+              <img src={LogoBlack} alt="Oracle Gaming logo" />
             </a>
 
             <div className="footer-menu-wrapper">
